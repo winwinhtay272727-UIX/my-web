@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>プロジェクトトラッカー</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            color: #2E86C1;
+	　　text-align:center;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            background-color: #fff;
+	　　table-layout: fixed;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+　　　　　　word-wrap: break-word;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+　　　　th:nth-child(1),
+        td:nth-child(1),
+        th:nth-child(4),
+        td:nth-child(4),
+        th:nth-child(5),
+        td:nth-child(5) {
+            text-align:center;
+        }
+
+        
+        td.status-complete { color: green; font-weight: bold; }
+        td.status-progress { color: orange; font-weight: bold; }
+        td.status-pending { color: red; font-weight: bold; }
+
+　　　table {
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<h1>プロジェクトトラッカー</h1>
+
+<h2>ダッシュボード</h2>
+
+<table>
+    <tr>
+        <th>プロジェクト名</th>
+        <th>開始日</th>
+        <th>終了日</th>
+        <th>進捗</th>
+        <th>状態</th>
+    </tr>
+    <tr>
+        <td>日本平幼稚園</td>
+        <td>2025-08-01</td>
+        <td>2026-01-25</td>
+        <td>
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 60%;"></div>
+            </div>
+            <span>60%</span>
+        </td>
+        <td class="status-progress">進行中 🔄</td>
+    </tr>
+</table>
+
+<style>
+.progress-container {
+    width: 100%;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 16px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #5DADE2, #2E86C1);
+    text-align: right;
+    border-radius: 10px 0 0 10px;
+    transition: width 0.5s ease;
+}
+</style>
+
+<h2>材料ログ</h2>
+<table>
+
+ <tr>
+
+     <th colspan="7" style="text-align:left; background-color:#f2f2f2; font-weight:bold;">
+            照明器具
+        </th>
+     </tr>
+    <tr>
+        <th>番号</th>
+        <th>型番</th>
+        <th>説明</th>
+        <th>数量</th>
+        <th>場所</th>
+        <th>使用日</th>
+	<th>製品仕様</th>
+	
+    </tr>
+   
+
+    <tr>
+        <td>1</td>
+        <td>XFX459UENLE9</td>
+        <td>LED 埋込40形 下面開放型</td>
+        <td>24 個</td>
+        <td>保育室1,2</td>
+        <td>2025-10-15</td>
+	<td>5200Lmタイプ,消費電力31.9W,光束維持時間40000時間,昼白色（5000Ｋ),Ra83</td>
+
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>XLX440AENULE9</td>
+        <td>LED 直付40形</td>
+        <td>3 個</td>
+        <td>荷受室,保育室2</td>
+        <td>2025-10-17</td>
+	<td>4000Lmタイプ,消費電力25W,光束維持時間40000時間,昼白色（5000Ｋ),Ra83</td>
+
+    </tr>
+　　<tr>
+        <td>3</td>
+        <td>XLW462AENZLE9</td>
+        <td>LED 直付40形 防湿防雨型</td>
+        <td>9 個</td>
+        <td>調理室</td>
+        <td>2025-10-23</td>
+	<td>6900Lmタイプ,消費電力43.1W,光束維持時間40000時間,ＩＰ２３防湿型,昼白色（5000 	Ｋ),Ra83</td>
+    </tr>
+　　<tr>
+        <td>4</td>
+        <td>XLX450AENPLE9</td>
+        <td>LED 直付40形</td>
+        <td>1 個</td>
+        <td>更衣室</td>
+        <td>2025-10-23</td>
+	<td>5200Lmタイプ,消費電力31.9W,光束維持時間40000時間,白色（5000Ｋ),Ra83</td>
+    </tr>
+　　<tr>
+        <td>5</td>
+        <td>XLX230AENCLE9</td>
+        <td>LED 直付20形</td>
+        <td>2　個</td>
+        <td>荷受室、倉庫１</td>
+        <td>2025-10-25</td>
+	<td>3200Lmタイプ,消費電力21.8W,光束維持時間40000時間,昼白色（5000Ｋ),Ra83</td>
+
+    </tr>
+　　<tr>
+        <td>6</td>
+        <td>XND2067WNLE9</td>
+        <td>LED ﾀﾞｳﾝﾗｲﾄ 200形</td>
+        <td>3 個</td>
+        <td>保育室２</td>
+        <td>2025-10-27</td>
+	<td>2005Lmタイプ,消費電力15W,埋込穴φ150,昼白色（5000Ｋ),Ra83</td>
+
+
+    </tr>
+　　<tr>
+        <td>7</td>
+        <td>XND1039WNLE9</td>
+        <td>LED ﾀﾞｳﾝﾗｲﾄ 100形</td>
+        <td>1 個</td>
+        <td>WC</td>
+        <td>2025-10-27</td>
+	<td>1035Lmタイプ,光束維持時間40000時間,昼白色（5000Ｋ),Ra83</td>
+
+    </tr>
+　　<tr>
+        <td>8</td>
+        <td>NNFB93605C</td>
+        <td>非常照明</td>
+        <td>1 個</td>
+        <td>調理室</td>
+        <td>2025-10-29</td>
+	<td>-</td>
+
+    </tr>
+　　<tr>
+        <td>9</td>
+        <td>CM-2330A</td>
+        <td>ｽﾋﾟｰｶｰ</td>
+        <td>3 個</td>
+        <td>調理室、保育室2、更衣室</td>
+        <td>2025-10-31</td>
+	<td>-</td>
+    </tr>
+　　<tr>
+        <td>10</td>
+        <td>PF20　ケ－ブル</td>
+        <td>電源ケーブル</td>
+        <td>100 M</td>
+        <td>天井</td>
+        <td>2025-10-31</td>
+	<td>-</td>
+    </tr>
+
+  <tr>
+
+     <th colspan="7" style="text-align:left; background-color:#f2f2f2; font-weight:bold;">
+            動力
+        </th>
+     </tr>
+　　　<tr>
+        <td>1</td>
+        <td>動力盤</td>
+        <td>500×1200×200mm</td>
+        <td>2 個</td>
+        <td>A棟</td>
+        <td>2025-10-15</td>
+	<td>－</td>
+
+    </tr>
+　　<tr>
+        <td>2</td>
+        <td>コンセント</td>
+        <td>15A/20A (防水型)</td>
+        <td>23 個</td>
+        <td>A棟</td>
+        <td>2025-10-15</td>
+	<td>－</td>
+
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>スイッチ</td>
+        <td>15A/20A (防水型)</td>
+        <td>23 個</td>
+        <td>A棟</td>
+        <td>2025-10-15</td>
+	<td>－</td>
+
+    </tr>
+
+</table>
+
+
+<h2>タスクトラッカー</h2>
+<table>
+    <tr>
+        <th>番号</th>
+        <th>タスク</th>
+        <th>担当者</th>
+        <th>期限</th>
+        <th>完了</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>照明取り付け</td>
+        <td>－</td>
+        <td>2025-10-20</td>
+        <td>✅</td>
+    </tr>
+　　<tr>
+        <td>2</td>
+        <td>ｽﾋﾟｰｶｰ取り付け</td>
+        <td>－</td>
+        <td>2025-10-20</td>
+        <td>✅</td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>ケーブル確認</td>
+        <td>－</td>
+        <td>2025-11-15</td>
+        <td>❌</td>
+    </tr>
+</table>
+
+<h2>アーカイブログ</h2>
+<table>
+    <tr>
+        <th>プロジェクト</th>
+        <th>完了日</th>
+        <th>フォルダパス</th>
+        <th>備考</th>
+    </tr>
+    <tr>
+        <td>日本平幼稚園</td>
+        <td>2026-01-25</td>
+        <td>C:\Users\user15\Desktop\Record\日本平幼稚園</td>
+        <td>アーカイブに移動済み</td>
+    </tr>
+</table>
+
+</body>
+</html>
